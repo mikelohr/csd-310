@@ -5,8 +5,12 @@ students = MongoClient(url)
 
 db = students.module_5
 
-docs = db.module_5.find()
+collection = db.students
+
+docs = collection.find()
 
 for doc in docs:
      print(doc)
-    
+
+
+

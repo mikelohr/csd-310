@@ -5,7 +5,7 @@ students = MongoClient(url)
 
 db = students.module_5
 
-collection = db.student_collection
+collection = db.students
 
 mike = {
 "student_id": "1007",
@@ -75,7 +75,15 @@ colin = {
 ]
 }
 student_3 = collection.insert_one(colin)
+
 print(student_1)
 print(student_2)
 print(student_3)
 
+mike_student_id = students.insert_one(mike).inserted_id
+jade_student_id = students.insert_one(jade).inserted_id
+colin_student_id = students.insert_one(colin).inserted_id
+ 
+print(mike_student_id)
+print(jade_student_id)
+print(colin_student_id)
